@@ -8,12 +8,12 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./ironman/scene.gltf");
+  const computer = useGLTF("./samurai/scene.gltf");
 
 
   return (
     <mesh>
-    <ambientLight intensity={2000.5} /> {/* New ambient light */}
+    <ambientLight intensity={20.5} /> {/* New ambient light */}
     {/* <hemisphereLight skyColor={'#ffffff'} groundColor={'#000000'} intensity={2000000} /> */}
     <spotLight
       position={[0, 0, 0 ]}
@@ -24,31 +24,31 @@ const Computers = ({ isMobile }) => {
       shadow-mapSize={1024}
     />
     
-    <pointLight intensity={3000} />
-    <pointLight position={[10, 10, -10]} intensity={3000} /> {/* New point light */}
-    <pointLight position={[-10, -10, -50]} intensity={3000} /> {/* New point light */}
+    <pointLight intensity={300} />
+    <pointLight position={[10, 10, -10]} intensity={30} /> {/* New point light */}
+    <pointLight position={[-10, -10, -50]} intensity={30} /> {/* New point light */}
 
-    <pointLight position={[40, 40, 50]} intensity={5000} />
-    <pointLight position={[40, -40, 50]} intensity={5000} />
-    <pointLight position={[-40, -40, 50]} intensity={12000} />
-    <pointLight position={[0, 0, 50]} intensity={12000} /> //front
-    <pointLight position={[0, 0, -50]} intensity={12000} /> //back
-    <pointLight position={[0, 0, -50]} intensity={5000} /> //back
-    <pointLight position={[0, 0, -50]} intensity={5000} /> //back
-    <pointLight position={[0, 0, -50]} intensity={5000} /> //back
+    <pointLight position={[40, 40, 50]} intensity={50} />
+    <pointLight position={[40, -40, 50]} intensity={50} />
+    <pointLight position={[-40, -40, 50]} intensity={120} />
+    <pointLight position={[0, 0, 50]} intensity={120} /> //front
+    <pointLight position={[0, 0, -50]} intensity={120} /> //back
+    <pointLight position={[0, 0, -50]} intensity={500} /> //back
+    <pointLight position={[0, 0, -50]} intensity={500} /> //back
+    <pointLight position={[0, 0, -50]} intensity={500} /> //back
     <pointLight position={[50, 0, 0]} intensity={5000} /> //right
     <pointLight position={[-50, 0, 0]} intensity={5000} /> //left
     <pointLight position={[0, 50, 0]} intensity={8000} /> //top
     <pointLight position={[0, -50, 0]} intensity={8000} /> //bottom
-    <pointLight position={[0, 0, 50]} intensity={5000} /> //front
+    <pointLight position={[0, 0, 50]} intensity={500} /> //front
     <pointLight position={[0, 0, 50]} intensity={5000} /> //front
     <pointLight position={[0, 0, 50]} intensity={5000} /> //front
 
 
     <primitive
       object={computer.scene}
-      scale={isMobile ? 45.5 : 70.45}
-      position={isMobile ? [0, -79.5, -2.2] : [0, -115.25, -1.5]}
+      scale={isMobile ? 45.5 : 40.45}
+      position={isMobile ? [0, -79.5, -2.2] : [0, -68.25, -1.5]}
       rotation={[-0.00, -0.0, -0.0]}
     />
   </mesh>
